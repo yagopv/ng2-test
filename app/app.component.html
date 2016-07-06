@@ -1,0 +1,12 @@
+<div id="person-list" class="container-fluid">
+  <person-list
+    *ngIf="!selectedPerson"
+    [people]="people"
+    (onSelectPerson)="selectPerson($event)">
+  </person-list>
+  <person
+    *ngIf="selectedPerson"
+    (onBack)="selectPerson($event)"
+    [person]="selectedPerson">
+  </person>
+</div>
