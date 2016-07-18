@@ -1,2 +1,7 @@
-<a href="" (click)="back()">Go back</a>
-<p>{{ person?.name?.first }}</p>
+<div class="card col-xs-4">
+  <img class="card-img-top" [src]="person.picture.large" [alt]="person.login.username">
+  <div class="card-block">
+    <h4 class="card-title">{{ person.name.first + ' ' + person.name.last  }}</h4>
+    <p class="card-text">{{ person.email }}</p>
+  </div>
+</div>

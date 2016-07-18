@@ -2,17 +2,15 @@
   <thead class="thead-inverse">
   <tr>
     <th>Name</th>
-    <th>Picture</th>
+    <th>Surname</th>
     <th>Email</th>
     <th>Cell</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let person of people" (click)="selectPerson(person)">
-    <td>
-      <img [src]="person.picture.thumbnail" alt="">
-    </td>
-    <td>{{ person.name.first + ' ' + person.name.last  }}</td>
+    <td>{{ person.name.first }}</td>
+    <td>{{ person.name.last }}</td>
     <td>{{ person.email }}</td>
     <td>{{ person.cell }}</td>
   </tr>
